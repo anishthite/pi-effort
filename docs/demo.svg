@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f0f12"/>
+      <stop offset="100%" stop-color="#16161a"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="4"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="1200" height="600" fill="#1f1f24"/>
+
+  <!-- Terminal window -->
+  <g filter="url(#shadow)" transform="translate(60,60)">
+    <rect width="1080" height="480" rx="12" fill="url(#bg)" stroke="#2a2a30" stroke-width="1"/>
+
+    <!-- Title bar -->
+    <rect width="1080" height="36" rx="12" fill="#1a1a1f"/>
+    <rect y="24" width="1080" height="12" fill="#1a1a1f"/>
+    <circle cx="20" cy="18" r="6" fill="#ff5f56"/>
+    <circle cx="40" cy="18" r="6" fill="#ffbd2e"/>
+    <circle cx="60" cy="18" r="6" fill="#27c93f"/>
+    <text x="540" y="23" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#7a7a82">pi-effort — /effort high</text>
+
+    <!-- Terminal content -->
+    <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="18" fill="#e8e8ec">
+      <!-- Line 1: prompt + slash command + arg -->
+      <text x="28" y="90">
+        <tspan fill="#7aa2f7">›</tspan>
+        <tspan fill="#e8e8ec"> </tspan>
+        <tspan fill="#bb9af7">/effort</tspan>
+        <tspan fill="#e8e8ec"> </tspan>
+        <tspan fill="#9ece6a">high</tspan>
+      </text>
+
+      <!-- Autocomplete dropdown -->
+      <g transform="translate(120, 110)">
+        <rect width="220" height="180" rx="6" fill="#1a1a1f" stroke="#2a2a30" stroke-width="1"/>
+        <text x="14" y="26" fill="#7a7a82" font-size="13">/effort &lt;Tab&gt;</text>
+        <line x1="0" y1="36" x2="220" y2="36" stroke="#2a2a30"/>
+        <text x="14" y="58" fill="#7a7a82">off</text>
+        <text x="14" y="82" fill="#7a7a82">minimal</text>
+        <text x="14" y="106" fill="#7a7a82">low</text>
+        <text x="14" y="130" fill="#7a7a82">medium</text>
+        <rect x="4" y="140" width="212" height="24" rx="3" fill="#283457"/>
+        <text x="14" y="158" fill="#9ece6a">high</text>
+        <text x="14" y="182" fill="#7a7a82">xhigh</text>
+      </g>
+
+      <!-- Notification line -->
+      <text x="28" y="350" fill="#7a7a82">[info]</text>
+      <text x="90" y="350" fill="#e8e8ec">Thinking: </text>
+      <text x="200" y="350" fill="#f7768e">medium</text>
+      <text x="290" y="350" fill="#7a7a82">→</text>
+      <text x="318" y="350" fill="#9ece6a">high</text>
+
+      <!-- Status footer -->
+      <text x="28" y="430" fill="#565660" font-size="14">─ thinking: high ─ claude-sonnet-4-5 ─ /reload to refresh ─</text>
+    </g>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="575" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="18" fill="#a0a0a8" font-weight="500">
+    /effort — quickly set the thinking effort level in pi
+  </text>
+</svg>

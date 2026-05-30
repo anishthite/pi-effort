@@ -21,6 +21,7 @@
   },
   "files": [
     "extensions",
+    "docs/demo.png",
     "README.md",
     "LICENSE"
   ],
@@ -32,7 +33,8 @@
   "pi": {
     "extensions": [
       "./extensions/effort.ts"
-    ]
+    ],
+    "image": "https://raw.githubusercontent.com/anishthite/pi-effort/main/docs/demo.png"
   },
   "peerDependencies": {
     "@earendil-works/pi-coding-agent": "*"

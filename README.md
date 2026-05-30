@@ -2,6 +2,8 @@
 
 A tiny [pi](https://pi.dev) extension that adds a global `/effort` slash command for quickly setting the thinking effort level on reasoning-capable models.
 
+![/effort demo](./docs/demo.png)
+
 ```
 /effort              # show current level
 /effort high         # set the level
