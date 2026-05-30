@@ -1,6 +1,9 @@
 {
-  "name": "pi-effort",
+  "name": "@anishthite/pi-effort",
   "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Slash command for pi to quickly set the thinking effort level (off|minimal|low|medium|high|xhigh).",
   "keywords": [
     "pi-package",

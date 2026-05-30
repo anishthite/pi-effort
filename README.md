@@ -24,11 +24,11 @@ The level is clamped to the active model's capabilities. If you ask for `high` o
 # from a local checkout (great for hacking)
 pi install /path/to/pi-effort
 
-# from git, once published
+# from git
 pi install git:github.com/anishthite/pi-effort
 
-# from npm, once published
-pi install npm:pi-effort
+# from npm
+pi install npm:@anishthite/pi-effort
 
 # try it for one session without installing
 pi -e /path/to/pi-effort
